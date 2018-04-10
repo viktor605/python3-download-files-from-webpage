@@ -1,4 +1,7 @@
 #!/usr/bin/env python3
+
+#http://qaru.site/questions/67250/retrieve-links-from-web-page-using-python-and-beautifulsoup
+
 from bs4 import BeautifulSoup
 import urllib.request
 from urllib.request import Request, urlopen, urlretrieve
@@ -12,7 +15,8 @@ for link in soup.find_all('a', href=True):
     links.append(link.get('href'))
     
 for elem in links:
-    elem = '%s%s' % (url, elem)
+    if 'http' not in elem:
+        elem = '%s%s' % (url, elem)
     print(elem)
     destination = elem.rsplit('/',1)[1]
     urlretrieve(elem, destination)
