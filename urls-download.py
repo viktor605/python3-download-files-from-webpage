@@ -14,5 +14,5 @@ for link in soup.find_all('a', href=True):
 for elem in links:
     elem = '%s%s' % (url, elem)
     print(elem)
-    destination = url.rsplit('/',1)[1]
+    destination = elem.rsplit('/',1)[1]
     urlretrieve(elem, destination)
