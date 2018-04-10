@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 
-#http://qaru.site/questions/67250/retrieve-links-from-web-page-using-python-and-beautifulsoup
+# http://qaru.site/questions/67250/retrieve-links-from-web-page-using-python-and-beautifulsoup
+# urllib.request.urlopen user agent: https://stackoverflow.com/questions/24226781/changing-user-agent-in-python-3-for-urrlib-request-urlopen
 
 from bs4 import BeautifulSoup
 import urllib.request
